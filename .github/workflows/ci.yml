@@ -13,7 +13,7 @@ jobs:
   build-java:
 
     runs-on: ubuntu-latest
-      Strategy:
+      strategy:
         matrix:
           os: [ubuntu-latest, windows-latest, maCOS-latest]
     
