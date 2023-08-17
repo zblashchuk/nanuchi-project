@@ -12,10 +12,10 @@ on:
 jobs:
   build-java:
 
-    runs-on: ubuntu-latest
-      Strategy:
-        matrix:
-          os: [ubuntu-latest, windows-latest, maCOS-latest]
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+       os: [ubuntu-latest, windows-latest, maCOS-latest]
     
     
     steps:
@@ -35,8 +35,8 @@ jobs:
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: nanajanashia/demo-app
-        registry: docker.io
+        image: zblashchuk/k8s-demo-app
+        registry: https://hub.docker.com/r
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
          
