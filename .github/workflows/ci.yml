@@ -35,7 +35,7 @@ jobs:
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: zblashchuk/k8s-demo-app
+        image: zblashchuk/k8s-demo-app/r/
         registry: hub.docker.com
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
