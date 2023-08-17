@@ -13,6 +13,10 @@ jobs:
   build-java:
 
     runs-on: ubuntu-latest
+      Strategy:
+        matrix:
+          os: [ubuntu-latest, windows-latest, maCOS-latest]
+    
     
     steps:
     - uses: actions/checkout@v2
