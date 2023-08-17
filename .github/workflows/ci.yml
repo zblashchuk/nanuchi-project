@@ -13,9 +13,9 @@ jobs:
   build-java:
 
     runs-on: ubuntu-latest
-      strategy:
-        matrix:
-          os: [ubuntu-latest, windows-latest, maCOS-latest]
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, maCOS-latest]
     
     
     steps:
